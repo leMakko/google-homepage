@@ -1,62 +1,175 @@
 <!DOCTYPE html>
-<style>
-    .img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 25px;
-        padding-top: 109px;
-        width: 272px;
-        height: 92px;
-        aspect-ratio: auto 272 / 92;
-    }
-    .input-div {
-        margin: 0 auto;
-        width: 582px;
-        height: 44px;
-        border: 1px solid #dfe1e5;
-        border-radius: 24px;
-    }
-    .input-text {
-        display: flex;
-        flex: 1 1 100%;
-        flex-wrap: wrap;
-        width: 500px;
-        height: 38px;
-        border: none;
-        margin-left: 35px;
-        font-size: 16px;;
-    }
-    .input-text:focus {
-       outline: none;
-       text-justify: auto;
-    }
-    .button-div {
-        margin: 0 auto;
-        width: 285px;
-        padding: 25px;
-    }
-    .button {
-        width: 130px;
-        height: 37px;
-        text-align: center;
-        border-color: transparent;
-        color: darkslategrey;
-        margin: 5px;
-        border-radius: 3px;
-    }
-</style>
-
 <html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined">
+        <style>
+            .img {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 25px;
+                padding-top: 109px;
+                width: 272px;
+                height: 92px;
+                aspect-ratio: auto 272 / 92;
+            }
+            .input-div {
+                display: flex;
+                margin: 0 auto;
+                width: 582px;
+                height: 44px;
+                border: 1px solid #dfe1e5;
+                border-radius: 24px;
+                align-items: center;
+            }
+            .input-div:hover {
+                box-shadow: 0 1px 6px 0 rgb(32 33 36 / 28%);
+            }
+            .input-text {
+                display: flex;
+                flex: 1 1 100%;
+                flex-wrap: wrap;
+                height: 100%;
+                font-size: 16px;
+                border: 0;
+                background-color: transparent;
+            }
+            .input-text:focus {
+               outline: none;
+               text-justify: auto;
+            }
+            .button-div {
+                display: flex;
+                justify-content: center;
+                padding-top: 18px;
+            }
+            .button {
+                min-width: 54px;
+                height: 36px;
+                text-align: center;
+                border: 1px solid transparent;
+                color: #5F6368;
+                background-color: #f2f2f2;
+                margin: 5px;
+                border-radius: 4px;
+                font-size: 14px;
+                padding: 0px 16px;
+                margin: 11px 4px
+            }
+            .button:hover {
+                border: 1px solid #c6c6c6;
+                color: #222222;
+                background-image: -webkit-linear-gradient(top,#f8f8f8,#f1f1f1);
+                cursor: pointer;
+            }
+            .header {
+                width: 98%;
+                height: 40px;
+                background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 1%;
+                margin-bottom: 45px;
+            }
+            .header-links {
+                color: #222222;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                text-decoration: none;
+                padding: 0 8px;
+            }
+            .header-links:hover {
+                text-decoration: underline;
+                color: black;
+            }
+            .menu{
+                color: gray; 
+                vertical-align: middle;
+            }
+            .menu:hover{
+                color: #000;
+            }
+            .signin{
+                background-color: #4285f4;
+                border: 1px solid #4285f4;
+                background-image: -webkit-linear-gradient(top, rgb(67, 135, 253), rgb(70, 131, 234));
+                border-radius: 3px;
+                padding: 6px 12px;
+                color: #ffffff;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 13px;
+                font-weight: bold;
+                text-decoration: none;
+                cursor: default;
+            }
+            .signin:active{
+                background-image: -webkit-linear-gradient(top, rgb(60, 122, 228), rgb(63, 118, 211));
+            }
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 40px;
+                background-color: #f2f2f2;
+                border-width: 50px;
+                display: flex;
+                align-items: center;
+            }
+            .footer-links
+            {
+                color: #5f5f5f;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 14px;
+                text-decoration: none;
+                padding: 11px;
+            }
+            .footer-links:hover {
+                text-decoration: underline;
+            }
+        </style>
+    </head>
     <body>
+        <!-- Header -->
+        <header class="header">
+            <div style="width: 50%; text-align: left;">
+                <a class="header-links" href="">About</a>
+                <a class="header-links" href="">Store</a>
+            </div>
+            <div style="width: 50%; text-align: right;">
+                <a class="header-links" href="">Gmail</a>
+                <a class="header-links" href="">Images</a>
+                <a class="header-links" href=""><span class="material-icons-outlined menu">apps</span></a>
+                <a class="signin" href=""><span>Sign In</span></a>
+            </div>
+        </header>
+        <!-- Main: Logo -->
         <div>
             <img class="img" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google">
-        </div>
+        </div>       
+        <!-- Main: Searchbar & Buttons -->
         <div class="input-div">
+            <span class="material-icons-outlined menu" style="margin: 0 15px; font-size: 20px;">search</span>
             <input class ="input-text" type="text">
+            <span class="material-icons-outlined menu" style="margin: 0 15px;">mic</span>
         </div>
         <div class="button-div">
-            <button class="button">Google Search</button> <button class="button">I'm Feeling Lucky</button>
+            <button class="button">Google Search</button> 
+            <button class="button">I'm Feeling Lucky</button>
         </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div style="width: 50%; text-align: left; padding-left: 20px;"> 
+                <a class="footer-links" href="">Advertising</a>
+                <a class="footer-links" href="">Business</a>
+                <a class="footer-links" href="">How Search works</a>
+            </div>
+            <div style="width: 50%; text-align: right; padding-right: 20px;">
+                <a class="footer-links" href="">Privacy</a>
+                <a class="footer-links" href="">Terms</a>
+                <a class="footer-links" href="">Settings</a>
+            </div>
+        </footer>
     </body>
 </html>
